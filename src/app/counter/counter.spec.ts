@@ -27,7 +27,7 @@ describe('#counter', () => {
     // run once for each `it` case
     beforeEach(() => {
         console.log('beforeEach');
-        // counter = new Counter();
+        counter = new Counter();
     });
 
     
