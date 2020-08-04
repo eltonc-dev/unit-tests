@@ -19,7 +19,7 @@ describe('#counter', () => {
     beforeAll(() => {
         console.log('beforeAll');
         // todo(1): uncomment to see 
-        counter = new Counter();
+        // counter = new Counter();
     });
 
     // Before each test case
@@ -29,6 +29,9 @@ describe('#counter', () => {
         console.log('beforeEach');
         // counter = new Counter();
     });
+
+    
+
 
     // By default always start with the word `should`
     // considered a `test case`
@@ -43,10 +46,11 @@ describe('#counter', () => {
     //     expect(counter.total).toEqual(2);
     // });
 
-    it('should add 5 when 5 passed', () => {
-        counter.add(5);
-        expect(counter.total).toEqual(5);
-    });
+
+    // it('should add 5 when 5 passed', () => {
+    //     counter.add(5);
+    //     expect(counter.total).toEqual(5);
+    // });
 
     // todo(3): uncomment to see 
     // it('should add value', () => {
