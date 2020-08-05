@@ -4,6 +4,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { UtilsService } from './utils.service';
 import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
+import { SHIPS_LIST_MOCK } from './testing';
 
 describe('UtilsService', () => {
   let service: UtilsService;
@@ -43,5 +44,16 @@ describe('UtilsService', () => {
       // it you forgot it, yout tests may return and timeout error
       done(); 
     })
+  });
+
+  it('Should map ships', () => {
+    // We Can see the use case of mock information
+    // It represents/simulates an API return.
+    const mapShips = service.mapShips(SHIPS_LIST_MOCK);
+    expect(mapShips.length).toEqual(1);
+    expect(mapShips[0]).toEqual({
+      ...SHIPS_LIST_MOCK[0],
+      completeName: `${SHIPS_LIST_MOCK[0].name} - ${SHIPS_LIST_MOCK[0].model}`
+    });
   });
 });

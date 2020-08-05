@@ -20,6 +20,9 @@ getTestBed().initTestEnvironment(
   platformBrowserDynamicTesting()
 );
 // Then we find all the tests.
+// the first parameter is about the path that jasmine will search the tests
+// the second parameter is about he will search in all folders inside it, all folder tree
+// the third parameter is a regex responsable to identify the test files
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.
 context.keys().map(context);
