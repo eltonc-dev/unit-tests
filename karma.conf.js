@@ -16,9 +16,33 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
+
+      // Represents the directory when the html coverage files will be placed
       dir: require('path').join(__dirname, './coverage/unit-tests-sample'),
-      reports: ['html', 'lcovonly', 'text-summary'],
-      fixWebpackSourcePaths: true
+
+      // Reports used
+      // html - generate html files
+      // text-summary - generates console output
+      reports: ['html', 'text-summary'],
+      fixWebpackSourcePaths: true,
+      // It`s possible to set a minimal value for each item
+      thresholds: {
+        // Represents variable declarations when it`s value change
+        // utils.service /  information variable
+        statements: 80,
+
+        // Represents all the conditionals in code
+        // Ifs and else
+        // switch case
+        // everything that creates more than one possibility
+        branches: 80,
+
+        // Represents the functions
+        functions: 54,
+
+        // Lines of code
+        lines: 71,
+      }
     },
     reporters: ['progress', 'kjhtml'], // karma jasmine html
     port: 9876,

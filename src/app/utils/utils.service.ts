@@ -10,6 +10,8 @@ import { Ship } from './ship';
 })
 export class UtilsService {
 
+  information = false;
+
   constructor(private http: HttpClient) { }
 
   getStartShips(): Observable<void | any[]> {
@@ -21,6 +23,7 @@ export class UtilsService {
   }
 
   someThing() {
+    this.information = true;
     console.log('something');
   }
 

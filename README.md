@@ -1,27 +1,34 @@
 # UnitTestsSample
+This repo shows how to unit test angular applications
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
+## Start
+`npm install`
 
-## Development server
+## test
+`ng test`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## coverage
+`ng test --code-coverage`
 
-## Code scaffolding
+## contains explanations of
+* karma configurations
+* istanbul configurations
+* simple unit tests
+* prepare environment to unit test
+* prepare environment to template integrations test
+* Stub/mock and spies
+* Sync and async unit tests
+* coverage configurations
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## slides
+https://docs.google.com/presentation/d/1glfL7qQsEzM8CMbe3xLtbQvlPc4JjRQa0PiNQH6Ir3Y/edit?usp=sharing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## important files
+* karma.conf.js
+* src/test.ts
+* All files with `spec` sufix
+* folder testing
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
